@@ -1,0 +1,127 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 50px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    margin-bottom: 30px;
+}
+
+header>h1{
+    margin-bottom: 20px;
+}
+
+hr{
+    border-style: dashed;
+}
+
+.first-break{
+    margin: 0px 0px 50px;
+}
+
+.second-break{
+    margin: 50px 0px 0px;
+}
+
+button{
+    padding: 10px 15px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    color: white;
+    font-size: 13px;
+}
+
+button.remove-item{
+    background-color: #798CA3;
+}
+button.add-item,
+button.change-description{
+    background-color: #5A87BA;
+}
+button.hide-list{
+    background-color: #67B0B1;
+}
+
+input{
+    height: 35px;
+    border: 1px solid #EDEDED;
+    border-radius: 5px;
+}
+
+
+
+/* section 1 */
+.list-control{
+    margin-bottom: 50px;
+}
+
+
+
+/* section 2 */
+.to-hide{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.list-description{
+    display: grid;
+    grid-template-columns: 200px 175px;
+    gap: 10px;
+    grid-template-areas:
+    "ld-label ld-label"
+    "ld-input ld-button";
+    align-items: center;
+}
+.list-description>label{
+    grid-area: ld-label;
+    font-weight: bold;
+}
+.list-description>input{
+    grid-area: ld-input;
+}
+.list-description>button{
+    grid-area: ld-button;
+}
+
+
+
+
+/* section 3 */
+.list-items{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.control-container{
+    display: grid;
+    grid-template-columns: 200px 100px 150px;
+    gap: 10px;
+    grid-template-areas:
+    "li-list li-list li-list"
+    "li-input ";
+}
+.list-items>ul{
+    grid-area: li-list;
+}
+.list-items>input{
+    grid-area: li-input;
+}
+.list-items>.add-item{
+    grid-area: li-add;
+}
+.list-items>.remove-item{
+    grid-area: li-rem;
+}
+
+button:active{
+    box-shadow: 0px 0px 10px grey;
+}
